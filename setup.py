@@ -12,6 +12,7 @@ colors_dir = os.path.join(home, 'vimfiles', 'colors')
 if not os.path.exists(colors_dir):
     os.makedirs(colors_dir)
 
+shutil.copyfile('gitconfig', os.path.join(home, '.gitconfig'))
 shutil.copyfile('vimrc', os.path.join(home, '.vimrc'))
 shutil.copytree('colors', colors_dir)
 

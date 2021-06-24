@@ -1,0 +1,11 @@
+[alias]
+   s = status
+   b = branch
+   d = diff
+   a = add 
+   cray = commit -a -m  
+
+   # Push current branch to origin
+   po = "!f() { branch=$(git rev-parse --abbrev-ref HEAD) && if [[ \"$branch\" == HEAD ]]; then echo \"No branch found.  Cannot push\"; unset branch; exit 1; else git push origin \"$branch\" \"$@\"; unset branch; fi }; f"
+   pu = "!f() { branch=$(git rev-parse --abbrev-ref HEAD) && if [[ \"$branch\" == HEAD ]]; then echo \"No branch found.  Cannot push\"; unset branch; exit 1; else git pull origin \"$branch\" \"$@\"; unset branch; fi }; f"
+
