@@ -1,0 +1,88 @@
+# Notes:
+# Search and replace current selection: sfoo<ret>cbar<esc>
+# Search and replace globally: %sfoo<ret>cbar<esc>
+# Jump to matching bracket: mm 
+# Reload file from disk: :reload<ret>
+# Run shell command: :sh command
+# Open file: :open <filename>
+
+# Helix Language Configuration: https://docs.helix-editor.com/languages.html
+# Helix Keybindings: https://docs.helix-editor.com/remapping.html
+# Language Server Support: https://docs.helix-editor.com/lang-support.html
+# Language Server Install Guide: https://github.com/helix-editor/helix/wiki/How-to-install-the-default-language-servers
+# Vim to Helix migration: https://github.com/helix-editor/helix/wiki/Migrating-from-Vim
+# Vim to Helix config sample: https://github.com/LGUG2Z/helix-vim/blob/master/config.toml
+# Helix Source w/ Commands: https://github.com/helix-editor/helix/blob/master/helix-term/src/commands.rs
+
+# TODO Jumplist
+# TODO Disable going down if going right goes past EOL
+# TODO yiwp and diwp for delete or copy word 
+# TODO panes or multiple windows
+
+# LSP for python: pip install python-lsp-server
+# LSP for rust: rustup component add rust-analyzer
+# LSP for sveltkit: TODO prettier
+
+    
+theme = "onedark"
+
+[editor]
+mouse = false
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+C-o = ":open ~/.config/helix/config.toml" # Maps Ctrl-o to opening of the helix config file
+
+# Search for word under cursor
+"*" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_next"]
+"#" = ["move_char_right", "move_prev_word_start", "move_next_word_end", "search_selection", "search_prev"]
+
+p = ["paste_clipboard_after", "collapse_selection"]
+P = ["paste_clipboard_before", "collapse_selection"]
+D = ["extend_to_line_end", "yank_main_selection_to_clipboard", "delete_selection"]
+
+# Make j and k behave as they do Vim when soft-wrap is enabled
+j = "move_line_down"
+k = "move_line_up"
+
+# Shift + hjkl to move farther
+H = ["move_char_left", "move_char_left", "move_char_left", "move_char_left", "move_char_left", "move_char_left", "move_char_left", "move_char_left", "move_char_left", "move_char_left"]
+L = ["move_char_right", "move_char_right", "move_char_right", "move_char_right", "move_char_right", "move_char_right", "move_char_right", "move_char_right", "move_char_right", "move_char_right"]
+J = ["move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down", "move_visual_line_down"]
+K = ["move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up", "move_visual_line_up"]
+
+y.y = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "normal_mode", "collapse_selection", "goto_line_start"]
+
+d.d = ["extend_to_line_bounds", "yank_main_selection_to_clipboard", "delete_selection"]
+d.h = ["select_mode", "move_char_left" , "delete_selection"]
+d.l = ["select_mode",  "delete_selection"]
+d.w = ["select_mode", "move_next_word_end", "delete_selection"]
+
+g.k = ["goto_file_start"]
+g.j = ["goto_file_end"]
+
+[keys.select]
+p = "replace_selections_with_clipboard" 
+P = "paste_clipboard_before"
+
+k = ["extend_line_up", "extend_to_line_bounds"]
+j = ["extend_line_down", "extend_to_line_bounds"]
+
+# Shift + hjkl to move farther
+H = ["extend_char_left", "extend_char_left"]
+L = ["extend_char_right", "extend_char_right"]
+J = ["extend_line_down", "extend_line_down", "extend_line_down", "extend_line_down", "extend_line_down", "extend_to_line_bounds"]
+K = ["extend_line_up", "extend_line_up", "extend_line_up", "extend_line_up", "extend_line_up", "extend_to_line_bounds"]
+
+y = ["yank_main_selection_to_clipboard", "normal_mode", "flip_selections", "collapse_selection"]
+
+g.k = ["goto_file_start"]
+g.j = ["goto_file_end"]
+
