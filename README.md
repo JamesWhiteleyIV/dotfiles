@@ -1,6 +1,5 @@
 # dotfiles
 
-
 MacOS Setup
 ----------------
 1. Pull this repo to e.g `~/Documents/git/dotfiles`
@@ -14,7 +13,11 @@ ln -s ~/Documents/git/dotfiles/bash ~/.config/bash
 
 3. Add this to the end of your `.zshrc`
 ```bash
+# source bash aliases
 [ -f ~/.config/bash/.bash_aliases ] && . ~/.config/bash/.bash_aliases
+
+# set prompt
+PS1='[%~] '
 ```
 
 4. Reload the shell or run `source ~/.zshrc`
