@@ -25,12 +25,6 @@
 # Vim to Helix config sample: https://github.com/LGUG2Z/helix-vim/blob/master/config.toml
 # Helix Source w/ Commands: https://github.com/helix-editor/helix/blob/master/helix-term/src/commands.rs
 
-# TODO panes or multiple windows
-
-# LSP for python: pip install python-lsp-server
-# LSP for rust: rustup component add rust-analyzer
-# LSP for sveltkit: TODO prettier
-
     
 theme = "onedark"
 
