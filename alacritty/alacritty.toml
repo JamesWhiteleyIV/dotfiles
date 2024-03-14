@@ -1,4 +1,4 @@
-working_directory = "/Users/james/Documents"
+working_directory = "/Users/james"
 
 [env]
 WINIT_X11_SCALE_FACTOR = "1.0"

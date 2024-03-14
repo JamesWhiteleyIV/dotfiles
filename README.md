@@ -1,24 +1,14 @@
 # dotfiles
 
-NEWNEW
-```
-brew tap homebrew/cask-fonts
-brew install font-hack-nerd-font
-brew install git gcc make unzip neovim ripgrep
-```
-
-
-
 MacOS Setup
 ----------------
-1. Pull this repo to e.g `~/Documents/git/dotfiles`
+1. Pull this repo to e.g `~/git/dotfiles`
 
 2. Symlink config files to proper locations
 ```bash
-ln -s ~/Documents/git/dotfiles/helix ~/.config/helix
-ln -s ~/Documents/git/dotfiles/alacritty ~/.config/alacritty
-ln -s ~/Documents/git/dotfiles/bash ~/.config/bash
-ln -s ~/Documents/git/dotfiles/nvim ~/.config/nvim
+ln -s ~/git/dotfiles/alacritty ~/.config/alacritty
+ln -s ~/git/dotfiles/bash ~/.config/bash
+ln -s ~/git/dotfiles/nvim ~/.config/nvim
 ```
 
 3. Add this to the end of your `.zshrc`
@@ -31,6 +21,12 @@ PS1='[%~] '
 ```
 
 4. Reload the shell or run `source ~/.zshrc`
+
+5. Install some deps
+```
+brew tap homebrew/cask-fonts
+brew install git gcc make unzip neovim ripgrep font-hack-nerd-font
+```
 
 
 Linux Setup
