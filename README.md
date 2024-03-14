@@ -16,7 +16,7 @@ ln -s ~/git/dotfiles/nvim ~/.config/nvim
 # source bash aliases
 [ -f ~/.config/bash/.bash_aliases ] && . ~/.config/bash/.bash_aliases
 
-# set prompt
+# set prompt to relative to $HOME
 PS1='[%~] '
 ```
 
@@ -28,8 +28,20 @@ brew tap homebrew/cask-fonts
 brew install git gcc make unzip neovim ripgrep font-hack-nerd-font
 ```
 
+RaspberryPi4 Setup
+----------------
+1. Pull this repo to e.g `~/git/dotfiles`
+
+2. ~/git/dotfiles/vim <-- copy or symlink this for your .vimrc
+
 
 Linux Setup
 ----------------
 TODO
+
+Windows Setup
+----------------
+TODO
+
+
 
