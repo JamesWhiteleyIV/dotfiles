@@ -1,5 +1,14 @@
 # dotfiles
 
+NEWNEW
+```
+brew tap homebrew/cask-fonts
+brew install font-hack-nerd-font
+brew install git gcc make unzip neovim ripgrep
+```
+
+
+
 MacOS Setup
 ----------------
 1. Pull this repo to e.g `~/Documents/git/dotfiles`
@@ -9,6 +18,7 @@ MacOS Setup
 ln -s ~/Documents/git/dotfiles/helix ~/.config/helix
 ln -s ~/Documents/git/dotfiles/alacritty ~/.config/alacritty
 ln -s ~/Documents/git/dotfiles/bash ~/.config/bash
+ln -s ~/Documents/git/dotfiles/nvim ~/.config/nvim
 ```
 
 3. Add this to the end of your `.zshrc`

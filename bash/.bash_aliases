@@ -7,4 +7,5 @@ alias gac='git add --all && git commit -m'
 alias gp='git push'
 alias py='python3'
 alias pip='python3 -m pip'
+alias vi='nvim'
 
